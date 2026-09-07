@@ -53,7 +53,7 @@
 | CEM / ACE | Constrained Energy Minimization / Adaptive Cosine Estimator | 常用高光谱目标检测器 |
 | GLRT | Generalized Likelihood Ratio Test | 广义似然比检验 |
 | SCR | Signal-to-Clutter Ratio | 信杂比，弱目标的重要度量 |
-| $P_d$ / $P_{fa}$ | Probability of Detection / False Alarm | 检出概率与虚警概率 |
+| $`P_d`$ / $`P_{fa}`$ | Probability of Detection / False Alarm | 检出概率与虚警概率 |
 | DN | Digital Number | 传感器输出的数字量化值 |
 | MTF@Nyquist | MTF at Nyquist frequency | 奈奎斯特频率处的 MTF，常用于评价补偿效果与过锐风险 |
 
@@ -94,7 +94,7 @@
 
 可将观测过程抽象为：
 
-$$
+```math
 \mathbf{Y}_{\lambda}
 =
 \mathbf{H}_{\lambda,\mathbf{s}}
@@ -103,11 +103,11 @@ $$
 \right]
 +\mathbf{N}_{\lambda},
 \qquad a_t \ll 1 ,
-$$
+```
 
-其中，$\mathbf{H}_{\lambda,\mathbf{s}}$ 表示随波长和空间位置变化的 PSF/MTF 算子；$\mathbf{M}_{\lambda,\mathbf{s}}$ 表示随场景、照明和位置变化的端元；$\mathbf{A}$ 为丰度，$a_t$ 为弱小目标丰度。一个可落地的联合目标应同时包含：
+其中，$`\mathbf{H}_{\lambda,\mathbf{s}}`$ 表示随波长和空间位置变化的 PSF/MTF 算子；$`\mathbf{M}_{\lambda,\mathbf{s}}`$ 表示随场景、照明和位置变化的端元；$`\mathbf{A}`$ 为丰度，$`a_t`$ 为弱小目标丰度。一个可落地的联合目标应同时包含：
 
-$$
+```math
 \mathcal{L}
 =
 \mathcal{L}_{data}
@@ -115,13 +115,13 @@ $$
 +\beta\mathcal{L}_{spectral}
 +\gamma\mathcal{L}_{unmix}
 +\delta\mathcal{L}_{target}.
-$$
+```
 
-- $\mathcal{L}_{data}$：补偿结果经 PSF 再退化后应与原始观测一致。
-- $\mathcal{L}_{MTF}$：约束目标频率响应，同时抑制过补偿、噪声放大和振铃。
-- $\mathcal{L}_{spectral}$：用 SAM/SAD、SID、逐波段相对误差或 DN 比例关系约束光谱保真。
-- $\mathcal{L}_{unmix}$：端元—丰度重建、非负与和为一约束，并允许局部端元或端元变异。
-- $\mathcal{L}_{target}$：直接约束目标丰度保持、检测分数、AUC 或固定虚警率下的检出概率。
+- $`\mathcal{L}_{data}`$：补偿结果经 PSF 再退化后应与原始观测一致。
+- $`\mathcal{L}_{MTF}`$：约束目标频率响应，同时抑制过补偿、噪声放大和振铃。
+- $`\mathcal{L}_{spectral}`$：用 SAM/SAD、SID、逐波段相对误差或 DN 比例关系约束光谱保真。
+- $`\mathcal{L}_{unmix}`$：端元—丰度重建、非负与和为一约束，并允许局部端元或端元变异。
+- $`\mathcal{L}_{target}`$：直接约束目标丰度保持、检测分数、AUC 或固定虚警率下的检出概率。
 
 #### Direct Bridge Papers（直接衔接关键研究环节的文献）
 
@@ -404,7 +404,7 @@ $$
 - 若结合解混，同时报告端元 SAD、丰度 RMSE、非负/和为一约束误差及下游分类或检测指标。
 - 优先使用真实或经标定的逐波段 PSF/MTF；若只使用统一高斯核，应明确其与真实光学系统之间的差距。
 - 对学习方法分别验证已知核、未知核、空间不变核、空间变核和跨传感器泛化，避免只在合成固定核上得出工程结论。
-- 弱小目标实验应按目标填充率、目标—背景光谱夹角、SCR/SNR 和 PSF/MTF 水平分层；主要报告 ROC、AUC、固定 $P_{fa}$ 下的 $P_d$，不要只报告复原图像质量。
+- 弱小目标实验应按目标填充率、目标—背景光谱夹角、SCR/SNR 和 PSF/MTF 水平分层；主要报告 ROC、AUC、固定 $`P_{fa}`$ 下的 $`P_d`$，不要只报告复原图像质量。
 - 传函补偿前后应同时比较目标中心丰度、PSF 支撑域内目标总丰度和检测分数，防止“中心像元变锐但总目标能量或谱形失真”。
 - 局部背景端元估计要设置目标保护或污染抑制机制，否则弱目标可能被吸收到背景字典中。
 

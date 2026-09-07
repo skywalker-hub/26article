@@ -4,28 +4,28 @@
 
 > 最后检索：2026-09-03。本文仅收集论文元数据与合法公开入口，不在仓库中分发受版权保护的全文。
 
-## Content
+## Content（目录）
 
-- [Scope and Selection](#scope-and-selection)
-- [Keywords Convention](#keywords-convention)
-- [Papers](#papers)
-  - [Reviews and Entry Points](#reviews-and-entry-points)
-  - [Task-Oriented Literature: Weak and Small Targets](#task-oriented-literature-weak-and-small-targets)
-    - [Recommended Research Wording](#recommended-research-wording)
-    - [Direct Bridge Papers](#direct-bridge-papers)
-    - [Weak and Subpixel Target Constraints](#weak-and-subpixel-target-constraints)
-    - [Scene-Adaptive Spectral Unmixing](#scene-adaptive-spectral-unmixing)
-    - [Chinese Directly Related Studies](#chinese-directly-related-studies)
-  - [Hyperspectral Deconvolution and Spectral-Preserving Enhancement](#hyperspectral-deconvolution-and-spectral-preserving-enhancement)
-    - [Model-Driven Methods](#model-driven-methods)
-    - [AI and Model-Data-Driven Methods](#ai-and-model-data-driven-methods)
-  - [Deconvolution with Spectral Unmixing](#deconvolution-with-spectral-unmixing)
-  - [Remote-Sensing MTF Compensation Foundations](#remote-sensing-mtf-compensation-foundations)
-  - [Chinese-Language Literature](#chinese-language-literature)
-- [Resources](#resources)
-- [Search Notes](#search-notes)
+- [Scope and Selection（收录范围与筛选标准）](#scope-and-selection收录范围与筛选标准)
+- [Keywords Convention（术语与缩写说明）](#keywords-convention术语与缩写说明)
+- [Papers（文献清单）](#papers文献清单)
+  - [Reviews and Entry Points（综述与入门文献）](#reviews-and-entry-points综述与入门文献)
+  - [Task-Oriented Literature: Weak and Small Targets（面向弱小目标任务的相关文献）](#task-oriented-literature-weak-and-small-targets面向弱小目标任务的相关文献)
+    - [Recommended Research Wording（建议的课题名称与研究表述）](#recommended-research-wording建议的课题名称与研究表述)
+    - [Direct Bridge Papers（直接衔接关键研究环节的文献）](#direct-bridge-papers直接衔接关键研究环节的文献)
+    - [Weak and Subpixel Target Constraints（弱目标与亚像元目标的建模约束）](#weak-and-subpixel-target-constraints弱目标与亚像元目标的建模约束)
+    - [Scene-Adaptive Spectral Unmixing（场景自适应光谱解混）](#scene-adaptive-spectral-unmixing场景自适应光谱解混)
+    - [Chinese Directly Related Studies（直接相关的中文研究）](#chinese-directly-related-studies直接相关的中文研究)
+  - [Hyperspectral Deconvolution and Spectral-Preserving Enhancement（高光谱去卷积与光谱保持增强）](#hyperspectral-deconvolution-and-spectral-preserving-enhancement高光谱去卷积与光谱保持增强)
+    - [Model-Driven Methods（模型驱动方法）](#model-driven-methods模型驱动方法)
+    - [AI and Model-Data-Driven Methods（人工智能与模型—数据联合驱动方法）](#ai-and-model-data-driven-methods人工智能与模型数据联合驱动方法)
+  - [Deconvolution with Spectral Unmixing（去卷积与光谱解混联合方法）](#deconvolution-with-spectral-unmixing去卷积与光谱解混联合方法)
+  - [Remote-Sensing MTF Compensation Foundations（遥感调制传递函数补偿基础）](#remote-sensing-mtf-compensation-foundations遥感调制传递函数补偿基础)
+  - [Chinese-Language Literature（中文文献）](#chinese-language-literature中文文献)
+- [Resources（相关资源）](#resources相关资源)
+- [Search Notes（检索说明与阅读建议）](#search-notes检索说明与阅读建议)
 
-## Scope and Selection
+## Scope and Selection（收录范围与筛选标准）
 
 - 本清单将“传函增强”解释为成像系统的 **MTF/OTF/PSF 退化补偿**，在不改变原始像元网格和波段数的前提下恢复空间频率响应。
 - **核心文献**：直接研究高光谱去卷积、散焦/运动模糊校正、空谱联合正则、光谱保持或“去卷积 + 解混”。
@@ -33,7 +33,7 @@
 - 超分辨率、全色锐化和 HSI-MSI 融合会改变空间采样或引入外部高分辨率观测，故不列入核心清单。
 - 星标 **★** 表示与当前课题最直接、建议优先阅读；它不是期刊等级或论文质量的绝对排序。
 
-## Keywords Convention
+## Keywords Convention（术语与缩写说明）
 
 | Abbreviation | Full name | 本清单中的含义 |
 |---|---|---|
@@ -57,9 +57,9 @@
 | DN | Digital Number | 传感器输出的数字量化值 |
 | MTF@Nyquist | MTF at Nyquist frequency | 奈奎斯特频率处的 MTF，常用于评价补偿效果与过锐风险 |
 
-## Papers
+## Papers（文献清单）
 
-### Reviews and Entry Points
+### Reviews and Entry Points（综述与入门文献）
 
 - **★ A Survey on Hyperspectral Image Restoration: From the View of Low-Rank Tensor Approximation**  
   *Na Liu, Wei Li, Yinjian Wang, Ran Tao, Qian Du, Jocelyn Chanussot*. *Science China Information Sciences*, 2023. [[paper](https://arxiv.org/abs/2205.08839)] [[doi](https://doi.org/10.1007/s11432-022-3609-4)] [[resources](https://github.com/NaLiu613/LRTA-HSI-Restoration-Survey)]
@@ -69,7 +69,7 @@
   *Danfeng Hong, Wei He, Naoto Yokoya, Jing Yao, Lianru Gao, Liangpei Zhang, Jocelyn Chanussot, Xiao Xiang Zhu*. *IEEE Geoscience and Remote Sensing Magazine*, 2021. [[paper](https://arxiv.org/abs/2103.01449)] [[doi](https://doi.org/10.1109/MGRS.2021.3064051)]
   - 关联：系统讨论模型驱动与深度学习结合，为构造可解释的 MTF/PSF 物理约束网络提供方法论。
 
-### Task-Oriented Literature: Weak and Small Targets
+### Task-Oriented Literature: Weak and Small Targets（面向弱小目标任务的相关文献）
 
 本节是针对“**弱小目标 + 光谱保真传函补偿 + 场景自适应光谱解混**”重新开展的专项检索。分级含义如下：
 
@@ -77,7 +77,7 @@
 - **B—强相关约束**：能够定义目标成像、光谱失配、背景自适应或评价方法。
 - **C—局部可用**：场景或任务并不完全相同，但其中的模块、损失或实验设计可迁移。
 
-#### Recommended Research Wording
+#### Recommended Research Wording（建议的课题名称与研究表述）
 
 建议课题名称：
 
@@ -123,7 +123,7 @@ $$
 - $\mathcal{L}_{unmix}$：端元—丰度重建、非负与和为一约束，并允许局部端元或端元变异。
 - $\mathcal{L}_{target}$：直接约束目标丰度保持、检测分数、AUC 或固定虚警率下的检出概率。
 
-#### Direct Bridge Papers
+#### Direct Bridge Papers（直接衔接关键研究环节的文献）
 
 - **A—直接桥接｜★ Deblurring and Sparse Unmixing of Hyperspectral Images Using Multiple Point Spread Functions**  
   *Sebastian Berisha, James G. Nagy, Robert J. Plemmons*. *SIAM Journal on Scientific Computing*, 37(5): S389–S406, 2015. [[paper](https://epubs.siam.org/doi/10.1137/140980478)] [[doi](https://doi.org/10.1137/140980478)]
@@ -139,7 +139,7 @@ $$
 
 还应与本清单已有的 **A Generalized Non-Convex Surrogated Framework for Anomaly Detection on Blurred Hyperspectral Images**、**Joint Hyperspectral Image Deconvolution and Unmixing via Plug-and-Play Priors** 和 **Does Deblurring Improve Geometrical Hyperspectral Unmixing?** 联读，三者分别补足“模糊条件下任务驱动探测”“现代联合去卷积—解混”和“模糊收缩光谱单纯形的理论解释”。
 
-#### Weak and Subpixel Target Constraints
+#### Weak and Subpixel Target Constraints（弱目标与亚像元目标的建模约束）
 
 - **B—强相关约束｜Subpixel Hyperspectral Target Detection Using Local Spectral and Spatial Information**  
   *Yuval Cohen, Dan G. Blumberg, Stanley R. Rotman*. *Journal of Applied Remote Sensing*, 6(1): 063508, 2012. [[paper](https://www.spiedigitallibrary.org/journals/journal-of-applied-remote-sensing/volume-6/issue-1/063508/Subpixel-hyperspectral-target-detection-using-local-spectral-and-spatial-information/10.1117/1.JRS.6.063508.full)] [[doi](https://doi.org/10.1117/1.JRS.6.063508)]
@@ -165,7 +165,7 @@ $$
   *Lifeng Yang, Xiaorui Song, Bin Bai, Zhuo Chen*. *Remote Sensing*, 16(12): 2245, 2024. [[paper](https://www.mdpi.com/2072-4292/16/12/2245)] [[doi](https://doi.org/10.3390/rs16122245)]
   - 可用点：从当前 HSI 自适应学习背景端元及其数量，无需为不同数据集手工指定字典规模；与“场景自适应背景解混”表述直接对应。
 
-#### Scene-Adaptive Spectral Unmixing
+#### Scene-Adaptive Spectral Unmixing（场景自适应光谱解混）
 
 - **A—直接桥接｜★ Spatially Adaptive Hyperspectral Unmixing**  
   *Kelly Canham, Ariel Schlamm, Amanda Ziemann, Bill Basener, David W. Messinger*. *IEEE Transactions on Geoscience and Remote Sensing*, 49(11): 4248–4262, 2011. [[paper](https://ieeexplore.ieee.org/document/6046125/)] [[doi](https://doi.org/10.1109/TGRS.2011.2169680)]
@@ -195,7 +195,7 @@ $$
   *Chao Zhou, Miguel R. D. Rodrigues*. *IEEE Transactions on Neural Networks and Learning Systems*, 35(11): 16478–16492, 2024. [[paper](https://discovery.ucl.ac.uk/id/eprint/10174936/)] [[doi](https://doi.org/10.1109/TNNLS.2023.3294714)]
   - 可用点：只利用待处理 HSI 的内部统计，同时生成端元和丰度；适合缺少跨场景标注和配对真值的场景自适应实现。
 
-#### Chinese Directly Related Studies
+#### Chinese Directly Related Studies（直接相关的中文研究）
 
 - **A—直接桥接｜一种自适应匹配子空间亚像元目标探测方法**  
   *杜博, 钟燕飞, 张良培, 李平湘*. *遥感学报*, 13(4): 597–603, 2009. [[paper](https://www.ygxb.ac.cn/zh/article/doi/10.11834/jrs.20090404/)] [[doi](https://doi.org/10.11834/jrs.20090404)]
@@ -217,9 +217,9 @@ $$
   *张蕾, 乔凯, 吴银花, 等*. *光学精密工程*, 31(21): 3156–3166, 2023. [[paper](https://ope.lightpublishing.cn/zh/article/doi/10.37188/OPE.20233121.3156/)] [[pdf](https://ope.lightpublishing.cn/rc-pub/front/front-article/download/43807360/lowqualitypdf/%E5%88%A9%E7%94%A8%E5%85%89%E8%B0%B1%E8%A7%A3%E6%B7%B7%E5%90%88%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B.pdf)] [[doi](https://doi.org/10.37188/OPE.20233121.3156)]
   - 可用点：融合目标端元丰度、光谱夹角和加权 CEM，降低目标像元对背景统计的污染；适合直接接在传函补偿之后形成任务损失。
 
-### Hyperspectral Deconvolution and Spectral-Preserving Enhancement
+### Hyperspectral Deconvolution and Spectral-Preserving Enhancement（高光谱去卷积与光谱保持增强）
 
-#### Model-Driven Methods
+#### Model-Driven Methods（模型驱动方法）
 
 - **★ Fast Positive Deconvolution of Hyperspectral Images**  
   *Simon Henrot, Charles Soussen, David Brie*. *IEEE Transactions on Image Processing*, 22(2): 828–833, 2013. [[paper](https://pubmed.ncbi.nlm.nih.gov/22955906/)] [[doi](https://doi.org/10.1109/TIP.2012.2216280)]
@@ -249,7 +249,7 @@ $$
   *Yinjian Wang, Wei Li, Yuanyuan Gui, Haijun Xie, Lianbo Zhang*. *IEEE Transactions on Image Processing*, 34: 3108–3122, 2025. [[metadata](https://dblp.dagstuhl.de/rec/journals/tip/WangLGXZ25.html)] [[doi](https://doi.org/10.1109/TIP.2025.3568745)]
   - 关联：把模糊建模、空谱低秩表示和下游异常检测耦合，说明传函补偿可围绕任务性能而不只围绕视觉锐度设计。
 
-#### AI and Model-Data-Driven Methods
+#### AI and Model-Data-Driven Methods（人工智能与模型—数据联合驱动方法）
 
 - **Learning Spectral-Spatial Prior Via 3DDnCNN for Hyperspectral Image Deconvolution**  
   *Xiuheng Wang, Jie Chen, Cédric Richard, David Brie*. *IEEE ICASSP*, 2403–2407, 2020. [[pdf](https://www.cedric-richard.fr/Articles/wang2019learning.pdf)] [[doi](https://doi.org/10.1109/ICASSP40776.2020.9054539)]
@@ -271,7 +271,7 @@ $$
   *Hongyu Xie, Mingyu Yang, Huansong Huang, Mingle Zhang, Wei Zhang, Qingbin Jiao, Liang Xu, Xin Tan*. *Remote Sensing*, 17(8): 1401, 2025. [[paper](https://www.mdpi.com/2072-4292/17/8/1401)] [[doi](https://doi.org/10.3390/rs17081401)]
   - 关联：以模糊核先验和空谱注意力恢复细节；其退化模型保持原空间、光谱采样尺寸，直接契合同分辨率增强。
 
-### Deconvolution with Spectral Unmixing
+### Deconvolution with Spectral Unmixing（去卷积与光谱解混联合方法）
 
 - **★ Deblurring and Sparse Unmixing for Hyperspectral Images**  
   *Xi-Le Zhao, Fan Wang, Ting-Zhu Huang, Michael K. Ng, Robert J. Plemmons*. *IEEE Transactions on Geoscience and Remote Sensing*, 51(7): 4045–4058, 2013. [[metadata](https://hub.hku.hk/handle/10722/276956)] [[doi](https://doi.org/10.1109/TGRS.2012.2227764)]
@@ -297,7 +297,7 @@ $$
   *Sina Layazali, Chrysanthe Preza*. *Remote Sensing*, 18(13): 2066, 2026. [[paper](https://www.mdpi.com/2072-4292/18/13/2066)] [[doi](https://doi.org/10.3390/rs18132066)]
   - 关联：在 ADMM 中结合卷积成像模型、DnCNN 隐式先验和丰度单纯形约束，同时改善重建与丰度估计，是该方向较新的 AI 化方案。
 
-### Remote-Sensing MTF Compensation Foundations
+### Remote-Sensing MTF Compensation Foundations（遥感调制传递函数补偿基础）
 
 以下论文主要针对全色、多光谱或通用光学遥感影像，不应直接当作高光谱结果；它们适合支撑 MTF 获取、补偿滤波器设计、噪声放大控制与工程化实现。
 
@@ -321,7 +321,7 @@ $$
   *Chao Wang, Ruifei Zhu*. *International Journal of Computer Applications in Technology*, 68(2): 132–142, 2022. [[paper](https://www.inderscience.com/info/inarticle.php?artid=123467)] [[doi](https://doi.org/10.1504/IJCAT.2022.123467)]
   - 关联：从遥感数据生产角度讨论 MTF 补偿，适合补充业务化处理流程。
 
-### Chinese-Language Literature
+### Chinese-Language Literature（中文文献）
 
 #### 直接高光谱去模糊与光谱保持
 
@@ -363,7 +363,7 @@ $$
   *周雨荷, 伏瑞敏, 齐文雯*. *航天返回与遥感*, 45(2): 125–133, 2024. [[paper](https://htfhyyg.spacejournal.cn/article/doi/10.3969/j.issn.1009-8518.2024.02.012?viewType=HTML)] [[pdf](https://htfhyyg.spacejournal.cn/cn/article/pdf/preview/10.3969/j.issn.1009-8518.2024.02.012.pdf)] [[doi](https://doi.org/10.3969/j.issn.1009-8518.2024.02.012)]
   - 关联：把在轨 MTF 测试与定量质量提升相连接，适合作为当前国产卫星业务方法参考。
 
-## Resources
+## Resources（相关资源）
 
 - [Hyperspectral Image Restoration Survey Resources](https://github.com/NaLiu613/LRTA-HSI-Restoration-Survey)：综述配套的论文、数据集与方法索引。
 - [Tuning-Free PnP HSI Deconvolution](https://github.com/xiuheng-wang/Tuning_free_PnP_HSI_deconvolution)：本清单中 2023 年 TGRS 论文的公开实现。
@@ -374,7 +374,7 @@ $$
 - [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)：Indian Pines、Pavia 等常用高光谱数据入口。
 - [USGS Spectral Library](https://www.usgs.gov/labs/spec-lab/capabilities/spectral-library)：构造端元、光谱保持和解混实验时可用的标准光谱库。
 
-## Search Notes
+## Search Notes（检索说明与阅读建议）
 
 ### 推荐检索式
 
